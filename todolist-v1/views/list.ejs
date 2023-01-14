@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>To DO List</title>
+</head>
+<body>
+    <div class="box" id="heading">
+        <h1><%=listTitle%></h1>
+    </div>
+    <div class="box" id="">
+        <% for(let i = 0; i<newListItem.length; i++){ %>
+        <div class="item">
+            <input type="checkbox">
+            <p><%=newListItem[i]%></p>
+        </div>
+        <% } %>
+        <form action="/" method="post" class="item">
+            <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+            <button type="submit" name="list" value=<%= listTitle %>>+</button>
+        </form>
+    </div>
+</body>
+
+<footer>Copyright 2022 PG Enterprises</footer>
+</html>
